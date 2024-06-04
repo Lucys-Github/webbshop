@@ -16,6 +16,7 @@ div{
   display: flex;
   justify-content: space-around;
   margin: 10px 0px;
+  position: sticky;
 }
 
 div a {

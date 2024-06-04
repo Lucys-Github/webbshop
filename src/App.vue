@@ -18,7 +18,7 @@ import AudioButton from './components/AudioButton.vue'
 
 <style scoped>
 #bg{
-  height: 100vh;
+  min-height: 100vh;
   background-color: antiquewhite;
 }
 </style>

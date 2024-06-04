@@ -15,6 +15,7 @@ width: 100%;
 text-align: center;
 padding-top: 30px;
 padding-bottom: 20px;
-background-color: #a0e9f2;
+background-color: burlywood;
+position: sticky;
 }
 </style>
