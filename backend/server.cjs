@@ -31,6 +31,28 @@ app.get('/imagePaths', (request, response) => {
   })
 })
 
+app.get('/products', (request, response) => {
+  database.all('SELECT * FROM weapons').then((products) => {
+    response.send(products)
+  })
+})
+
+app.get('/messages', (request, response) => {
+  database.all('SELECT * FROM messages').then((messages) => {
+    response.send(messages)
+  })
+})
+
+/* app.post('/submit', (req, res) => {
+  const { user, message } = req.body;
+  database.run(
+    'INSERT INTO messages (user, message) VALUES (?, ?)',
+    [user, message]
+  )
+}); */
+
+
+
 app.listen(3000, () => {
   console.log('Redo på http://localhost:3000/')
 })

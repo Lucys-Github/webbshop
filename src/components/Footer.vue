@@ -4,10 +4,17 @@
 
 <template>
     <div>
-        <h1>THE DARWINIST</h1>
-        <h2>"Those who die are weak. We sell weapons for peace."</h2>
+        <h4> <u>The darwinist</u></h4>
+        <p>Website created 2024</p>
     </div>
 </template>
 
 <style scoped>
+div{
+background-color: antiquewhite;
+text-align: center;
+padding-bottom: 20px;
+padding-top: 10px;
+border-top: 2px solid darkred;
+}
 </style>

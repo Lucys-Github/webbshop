@@ -31,7 +31,7 @@ img{
     width: 100%;
     height: auto;
     object-fit: cover;
-    outline: 4px solid palevioletred;
+    outline: 4px solid darkred;
 }
 
 </style>

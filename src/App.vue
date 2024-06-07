@@ -2,18 +2,18 @@
 import Header from './components/Header.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import AudioButton from './components/AudioButton.vue'
+import CalmBgAudio from './components/CalmBgAudio.vue'
 
 </script>
 
 <template>
   <Header/>
   <Navbar/>
-  <AudioButton/>
   <div id="bg">
-    <RouterView />
+    <RouterView/>
   </div>
   <Footer/>
+  <CalmBgAudio/>
 </template>
 
 <style scoped>
