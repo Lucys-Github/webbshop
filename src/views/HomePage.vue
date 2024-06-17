@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 
-import OverlayStart from '../components/OverlayStart.vue'
-
 const products = ref([]);
 
 fetch('http://localhost:3000/products')
@@ -25,7 +23,6 @@ fetch('http://localhost:3000/products')
         <button> Buy for {{ product.lives }} lives </button>
         </div>
     </div>
-    <OverlayStart/>
 </template>
 
 <style scoped>

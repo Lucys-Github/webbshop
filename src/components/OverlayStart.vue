@@ -1,24 +1,27 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 
-import AudioButtonCalm from '../components/AudioButtonCalm.vue'
+const emit = defineEmits(['interaction']);
 
 let showOverlay = ref(true);
 
-const toggleOverlay = () => {
+const onClick = () => {
     showOverlay.value = !showOverlay.value
+    emit('interaction');
 }
 
 </script>
 
 <template>
-    <div class="overlay" v-if="showOverlay">
-        <AudioButtonCalm @toggle-overlay="toggleOverlay"/>
+    <div id="overlay" v-if="showOverlay">
+        <button @click="onClick">
+            <h2>Start shopping</h2>
+        </button>
     </div>
 </template>
 
 <style scoped>
-.overlay {
+#overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -34,5 +37,15 @@ const toggleOverlay = () => {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+}
+
+#buttonFlex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 80%;
 }
 </style>
