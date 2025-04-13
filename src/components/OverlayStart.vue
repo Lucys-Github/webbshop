@@ -28,9 +28,9 @@ const onClick = () => {
     width: 100%;
     height: 100%;
     background-color: black;
-    border: 30px solid darkred;
-    opacity: 0.8;
-    z-index: 1000;
+    border: 30px solid hwb(0 0% 46%);
+/*     opacity: 0.8;
+ */    z-index: 1000;
     display: block;
     display: flex;
     flex-direction: column;

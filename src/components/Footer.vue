@@ -3,18 +3,27 @@
 </script>
 
 <template>
-    <div>
-        <h4> <u>The darwinist</u></h4>
-        <p>Website created 2024</p>
+    <div id="footer">
+        <h4> The Darwinist</h4>
+        <p>website created 2024</p>
     </div>
 </template>
 
 <style scoped>
-div{
-background-color: antiquewhite;
-text-align: center;
-padding-bottom: 20px;
-padding-top: 10px;
-border-top: 2px solid darkred;
+#footer{
+background-color: black;
+color: white;
+border-top: 3px solid darkred;
+min-height: 80px;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:7px;
 }
+
+p{
+    font-size: 0.8rem;
+}
+
 </style>
