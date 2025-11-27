@@ -3,11 +3,27 @@ import { defineEmits } from 'vue';
 
 const emit = defineEmits(['toggleOverlay']);
 
+const unLoopedAudios = ["scream1.mp3", "scream2.mp3", "scream3.mp3" ];
+
+const loopedAudios = [
+  "explosion1.mp3",
+  "explosion2.mp3",
+  "explosion3.mp3",
+  "glass1.mp3",
+  "gun1.mp3",
+  "gun2.mp3",
+  "gun3.mp3",
+  "gun4.mp3",
+  "gun5.mp3",
+  "gun6.mp3",
+  "gun7.mp3"
+];
+
 const playAudio = (() => {
 emit('toggleOverlay');
 const audioElements = document.querySelectorAll("audio");
 audioElements.forEach(audioElement => {
-  audioElement.play();
+ audioElement.play();
 });
 })
 </script>
@@ -16,36 +32,8 @@ audioElements.forEach(audioElement => {
     <button @click="playAudio" >
             <h1> Buy for 21 lives </h1>
     </button>
-    <!-- Not looped -->
-    <audio class="stop" preload="auto"  src="scream1.mp3" type="audio/mp3">
-    </audio>
-    <audio  class="stop" preload="auto"  src="scream2.mp3" type="audio/mp3">
-    </audio>
-    <audio  class="stop" preload="auto"  src="scream3.mp3" type="audio/mp3">
-    </audio>
-    <!-- Looped -->
-    <audio  preload="auto" loop src="explosion1.mp3" type="audio/mp3">
-    </audio>
-    <audio preload="auto" loop src="explosion2.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="explosion3.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="glass1.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="gun1.mp3" type="audio/mp3">
-    </audio>
-    <audio preload="auto" loop src="gun2.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="gun3.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="gun4.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="gun5.mp3" type="audio/mp3">
-    </audio>
-    <audio  preload="auto" loop src="gun6.mp3" type="audio/mp3">
-    </audio>
-    <audio preload="auto" loop src="gun7.mp3" type="audio/mp3">
-    </audio>
+    <audio v-for="audio in unLoopedAudios" :key="audio" :src="audio" type="audio/mp3" preload="auto"></audio>
+    <audio v-for="audio in loopedAudios" :key="audio" :src="audio" type="audio/mp3" preload="auto"></audio>
 </template>
 
 <style scoped>
