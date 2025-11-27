@@ -26,8 +26,7 @@ let play = ref(false);
 
 <style scoped>
 #router-view-div {
-/*   min-height: 100vh;
- */  background-color: white;
+ background-color: white;
   margin: 40px 90px;
 }
 

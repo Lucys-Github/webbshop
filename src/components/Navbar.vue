@@ -3,16 +3,16 @@
 </script>
 
 <template>
-  <div>
+  <nav>
     <RouterLink to="/">Products</RouterLink>
     <RouterLink to="/shoppingbag">Shopping bag</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/thankyounotes">Thank you notes</RouterLink>
-  </div>
+  </nav>
 </template>
 
 <style scoped>
-div {
+nav {
   display: flex;
   font-size: larger;
   justify-content: space-around;
@@ -22,14 +22,14 @@ div {
   border-bottom: 1px solid #8b0000;
 }
 
-div a {
+nav a {
   padding: 0 10px;
   color:black;
   font-size: large;
   text-decoration: none;
 }
 
-div a:hover {
+nav a:hover {
   text-decoration: underline;
   text-shadow:darkred 3px 3px 10px ;}
 </style>

@@ -47,7 +47,6 @@ const onClick = () => {
 }
 
 button {
-    transition:height 0.25s ease-in, width 0.25s ease-in;
     width: 80vw;
     height: 44px;
 }
