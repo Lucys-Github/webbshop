@@ -18,15 +18,17 @@ let play = ref(false);
   <Header />
   <Navbar />
   <OverlayStart @interaction="startAudio"/>
-  <div id="bg">
+  <div id="router-view-div">
     <RouterView />
   </div>
   <Footer />
 </template>
 
 <style scoped>
-#bg {
-  min-height: 100vh;
-  background-color: antiquewhite;
+#router-view-div {
+/*   min-height: 100vh;
+ */  background-color: white;
+  margin: 40px 90px;
 }
+
 </style>

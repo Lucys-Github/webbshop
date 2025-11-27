@@ -14,14 +14,16 @@ fetch('http://localhost:3000/products')
 
 <template>
     <div id="flex-container">
-        <div class="flex-item" v-for="product in products">
-        <div>
+        <div id="product-card" v-for="product in products">
+        <div id="product-title">
         <p><strong>{{ product.name }} </strong></p>
         <p>{{ product.info }}</p>
         </div>
+        <div id="image-container">
         <img :src="product.imagePath">
-        <button> Buy for {{ product.lives }} lives </button>
         </div>
+        <button> Buy for {{ product.lives }} lives </button>
+    </div>
     </div>
 </template>
 
@@ -29,27 +31,49 @@ fetch('http://localhost:3000/products')
 #flex-container{
 display: flex;
 flex-wrap: wrap;
+flex-direction: row;
 justify-content: space-around;
-margin: 40px 0px;
 gap: 20px;
 }
 
-.flex-item{
+#product-title{
+    text-align:left;
+    width: 100%;
+}
+
+#product-card{
     width: 200px;
     height: 200px;
+    padding: 20px;
+    outline: 3px solid black;
+    box-shadow: 2px 2px 2px 4px rgb(139 0 0 / 1);
+    margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#image-container{
+    display: flex;
+    max-width: 150px;
+    max-height: 100px;
 }
 
 img{
-    max-height: 105px;
     object-fit: contain;
 }
 
 button {
-    padding: 2px 4px;
-    color: darkred;
-}
+    padding: 8px 0px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: 2px solid darkred;
+    box-shadow: inset 3px 3px 7px 1px rgb(0 0 0 / 0.5);
+   }
+   
 
 </style>
