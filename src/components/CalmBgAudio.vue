@@ -1,5 +1,5 @@
 <script setup>
-import { watch, ref } from 'vue';
+import { watch } from 'vue';
 
 const playAudio = (() => {
     const audioElement = document.querySelector("audio");

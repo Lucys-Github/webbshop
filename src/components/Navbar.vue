@@ -4,10 +4,10 @@
 
 <template>
   <div>
-    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/">Products</RouterLink>
+    <RouterLink to="/shoppingbag">Shopping bag</RouterLink>
     <RouterLink to="/about">About</RouterLink>
     <RouterLink to="/thankyounotes">Thank you notes</RouterLink>
-    <RouterLink to="/shoppingbag">Shopping bag</RouterLink>
   </div>
 </template>
 

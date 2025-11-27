@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import HomePage from './views/HomePage.vue'
+import ProductsPage from './views/ProductsPage.vue'
 import AboutPage from './views/AboutPage.vue'
 import ThankYouPage from './views/ThankYouPage.vue'
 import ShoppingBag from './views/ShoppingBag.vue'
@@ -10,7 +10,7 @@ export default createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      component: HomePage,
+      component: ProductsPage,
       path: '/'
     },
     {

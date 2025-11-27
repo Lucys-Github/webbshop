@@ -53,3 +53,6 @@ const handleSubmit = () => {
             <p>message:{{ message.message }}</p>
         </div>
 </template>
+
+<style scoped>
+</style>
