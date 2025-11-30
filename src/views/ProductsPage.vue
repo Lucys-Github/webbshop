@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { shoppingBag } from '../store'
 
 const products = ref([]);
 
@@ -7,9 +8,7 @@ fetch('http://localhost:3000/products')
     .then(response => response.json())
     .then(result => {
         products.value = result;
-        console.log(products.value)
     })
-
 </script>
 
 <template>
@@ -22,7 +21,7 @@ fetch('http://localhost:3000/products')
             <div id="image-container">
                 <img :src="product.imagePath">
             </div>
-            <button> Buy for {{ product.lives }} lives </button>
+            <button @click="shoppingBag.addProduct(product.id)"> Buy for {{ product.lives }} lives </button>
         </div>
     </div>
 </template>
@@ -42,7 +41,7 @@ fetch('http://localhost:3000/products')
 }
 
 #product-card {
-    box-shadow: 2px 2px 2px 4px rgb(139 0 0 / 1);
+    box-shadow: 2px 2px 2px 4px rgb(139 0 0);
     width: 200px;
     height: 200px;
     padding: 20px;
@@ -74,7 +73,7 @@ button {
 }
 
 button:hover {
-    outline: 4px solid  rgb(139 0 0 / 1);
+    outline: 4px solid  rgb(139 0 0);
 }
 
 button:active {
